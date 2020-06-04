@@ -10,8 +10,10 @@
         </ul>
       </nav>
     </header>
-
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+      
   </div>
 </template>
 
@@ -33,6 +35,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  overflow: hidden;
   
   header {
     padding: 10px;
@@ -61,6 +64,23 @@ export default {
         }
       }
     }
+  }
+
+  div {
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fade-enter , .fade-leave-to {
+    opacity: 0;
+    transform: translateX(2em);
+  }
+
+  .fade-enter-active , .fade-leave-active {
+    transition: all .3s ease-in-out;
   }
 }
 </style>
