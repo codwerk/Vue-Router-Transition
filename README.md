@@ -1,4 +1,5 @@
-# vue-router-transition
+# Vue Router Transition
+Les transitions sont la touche finale lors de la conception d'un  site internet. Il faut combiner  la bibliothèque vue router et  de belle transition de page.
 
 ## Project setup
 ```
